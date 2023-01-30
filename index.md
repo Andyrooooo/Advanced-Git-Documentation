@@ -68,7 +68,8 @@ using the command `git rebase <target branch> -i` it will bring up the various c
 
 #### `git reset --soft` will not touch your index, so it will keep your files and stage all changes back, and will be back prior to being commited. It will still move you down to the targeted commit but when you run git status they will be there in the staging area.
 ![hard, soft, reset](https://user-images.githubusercontent.com/97576252/215557231-d7bc3216-a611-4203-a933-10be348d25e6.png)
-(we need to get the website reference put in here_________________________________________________________________________________________________________________________________________________________________________________________________)
+[https://www.howtogeek.com/devops/how-does-git-reset-actually-work-soft-hard-and-mixed-resets-explained/#:~:text=They%20all%20rewrite%20Git%20history%2C%20and%20they%20all,files%20the%20same%20but%20unstages%20the%20changes.%20]
+
 ### What is Git checkout?
 #### Git checkout is a way for you to move from one branch to another. When working on a project and needing to split into another branch to work on the project without affecting the actual project you'll find this very handy to go back and forth between different versions. Not only that but you can point to a specific commit and look at it at that snapshot in time. So, it can be used to copy a file from another commit into your current working tree, but won't automatically commit the file.
 (place image here)
