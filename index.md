@@ -1,34 +1,34 @@
 # Git Basics
 
-## What is Git?
+### What is Git?
 #### Git is a version control system that will track all your files and any changes made to them to boil it down. It does this by your commits you make, each commit Git will go through your lines of code and see which lines have changed and save those into the "timeline" which is just a snapshot of how it looked at the moment of the commit. This gives you a history of your commits you have made that you can reference back to, or just revert back to a specific commit you made. Git can be linear in this "timeline" but it doesn't have to be, Git also allows you to branch from your main root repository to allow you to work on your projects without any changes made to the main project. If your trying to work on some code for a specific feature or working collaboratively and the project is divided out to each member each person can work in another branch without affecting the main project, and then can later be merged together. Now, Git has three main states that your files can be in, there's the modified, staged, and committed states. When your file has changed, say you have made changes to your code and you save it in like VSCode it will then be in the modified state. Once you add the new changes it is then moved from the working directory into the staged state. In the staged state you can look through the changes and only commit cerain files or commit it all, it is really up to you, but when you are ready you will commit your changes and it will then be in the committed state where the files are now tracked by git. 
 
-## Why use Git? What problem does it slove?
+### Why use Git? What problem does it slove?
 #### Git accomplishes exactly what I explained in the previous paragraph, it makes commits, merging, branching, and overall collaboration so much easier and faster. It also allows other to make a clone of your work to help with this collaboration. If they have a repository they can copy your files including your commit history and work in different areas but then merge those changes together. You're able to work on the same file as your team mate or friend.
 
-# What is the difference between Git and Github?
+### What is the difference between Git and Github?
 #### Git is the actual version control system that you will use on your local machine to work on your projects. The whole process we talked about earlier will apply to Git. So, you can make changes add those changes and then commit, which is saving it your local files. GitHub is essentially the hosting service for your repositories if you decide to take that route. To do that, once you committed your changes to your files you would push this to your repository on GitHub (make sure you create the repo on GitHub first). It is also helpful for those trying to find others to collaborate on their work outside of their project group. Others may make suggestions for the code, contribute, or even use your code for their projects. GitHub is a good way to find features, frameworks, and other work that may help your project. 
 
 
-# Git rebase
-## What is Git rebase?
+## Git rebase
+### What is Git rebase?
 #### Git Rebase is a command used to merge commits from one branch on top of another branch that you choose. So, essentially it orphans the original commits made by the new branch when it split from the ancestor of this branch and another branch, and then places them on top of the branch you chose. So, it is all the same commit history it just makes your commit history more linear. 
 (then place the image in here)
 
-## What are some advantages and disadvantages of Git rebase? (At least 2 of each)
-### Advantages (make this bold)
+### What are some advantages and disadvantages of Git rebase? (At least 2 of each)
+#### **Advantages**
 * An advantage to this is reviewing your history will be much easier when it is more linear than a gigantic mess of many different branches.
 * Another advantage is if your working in a large team, using rebase can help clean up intermediate commits by making them just one commit.
 * It also eliminates the need to merge the two branches because it has essentially merged them with the commits in a linear way.
 
-### Disadvantages (make this bold)
+#### **Disadvantages**
 * Although it may have its advantages, not many people have experience with rebase and if done incorrectly can be destructive to your commit history if there turns out to be any bugs or no documentation as to why something was done the way it was.
 * It can also be more time consuming if you rebase branches with a buch of conflicts, and nobody wants to spend more time on something they are already spending a lot of time on.
 
-## When shouldn't you use Git rebase? Why?
+### When shouldn't you use Git rebase? Why?
 #### Using Git Rebase may seem nice to use when you want to make your commit history linear and nice to look at, however I would say you shouldn't use Rebase on larger projects with mutiple developers working on the project. This is because there can be more disadvantages then there are advantages. If you have developers who are prone to mistakes they may introduce bugs into the project which inevitably may take longer to resolve. At times you may never notice this bug until later down the road and can be a long road going through the history to find the issue.
 
-# Create a new repo and demonstrate your knowledge of the following items with screenshots:
+## Create a new repo and demonstrate your knowledge of the following items with screenshots:
 ### A rebase merge
 here insert the image of the rebase
 #### As you will see here we have the initial commits and a point where the "new" branch diverged from the master branch and created commits of their own. We then use the rebase command from the "new" feature and it re-writes its history on top of the master branch. 
