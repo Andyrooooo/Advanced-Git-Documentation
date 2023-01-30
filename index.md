@@ -13,7 +13,9 @@
 ## Git rebase
 ### What is Git rebase?
 #### Git Rebase is a command used to merge commits from one branch on top of another branch that you choose. So, essentially it orphans the original commits made by the new branch when it split from the ancestor of this branch and another branch, and then places them on top of the branch you chose. So, it is all the same commit history it just makes your commit history more linear. 
-(then place the image in here)
+![rebase2](https://user-images.githubusercontent.com/97576252/215553550-f0674ddf-ea29-427e-b1cd-428fefb50473.jpg)![rebase](https://user-images.githubusercontent.com/97576252/215553617-8b0dbc0e-640b-434d-8bc4-548a6c839392.jpg)
+
+
 
 ### What are some advantages and disadvantages of Git rebase? (At least 2 of each)
 #### **Advantages**
@@ -94,12 +96,12 @@ In here you will see the new commit and it is blue to indicate the git revert.
 
 
 ### What are the advantages and disadvantages of Git submodules?
-#### Advantages
+#### **Advantages**
 * In some situations its easier to share your code between different projects. Say you just want to share your code with someone else or another project but some of the code is not available with a package manager. This can offer a more simple solution to help you achieve what you want. 
 
 * An advantage to submodules is the fact it can keep your project more clean when introducing third party code into your project. When you copy and paste code into your project from someone else to acheive a function, or feature or whatever it is, your blending it into your project and knowing what is your code and theirs can get confusing. I know from experience that doing this can make it confusing down the road because of others styles it can take more time to read it.
 
-#### Disadvantages
+#### **Disadvantages**
 * Now given how great it can be it can also be complicated to get to this step and may confuse those who try to use it for the first time.
 
 * Another problem that can arise from using submodules is that it can get pretty complicated, and by this I mean if you try to merge your submodules into your main repo it can get very complex and can turn some away from it. 
