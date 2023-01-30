@@ -68,15 +68,18 @@ using the command `git rebase <target branch> -i` it will bring up the various c
 
 #### `git reset --soft` will not touch your index, so it will keep your files and stage all changes back, and will be back prior to being commited. It will still move you down to the targeted commit but when you run git status they will be there in the staging area.
 ![hard, soft, reset](https://user-images.githubusercontent.com/97576252/215557231-d7bc3216-a611-4203-a933-10be348d25e6.png)
-[https://www.howtogeek.com/devops/how-does-git-reset-actually-work-soft-hard-and-mixed-resets-explained/#:~:text=They%20all%20rewrite%20Git%20history%2C%20and%20they%20all,files%20the%20same%20but%20unstages%20the%20changes.%20]
+reference - https://www.howtogeek.com/devops/how-does-git-reset-actually-work-soft-hard-and-mixed-resets-explained/#:~:text=They%20all%20rewrite%20Git%20history%2C%20and%20they%20all,files%20the%20same%20but%20unstages%20the%20changes.%20
 
 ### What is Git checkout?
 #### Git checkout is a way for you to move from one branch to another. When working on a project and needing to split into another branch to work on the project without affecting the actual project you'll find this very handy to go back and forth between different versions. Not only that but you can point to a specific commit and look at it at that snapshot in time. So, it can be used to copy a file from another commit into your current working tree, but won't automatically commit the file.
-(place image here)
+![checkout](https://user-images.githubusercontent.com/97576252/215595302-71ae12e1-ed74-408d-873e-b4af5dba2fe3.jpg)
+![checkout2](https://user-images.githubusercontent.com/97576252/215595322-cc672589-64a6-4ed3-97ac-b0566e4efb6b.jpg)
+
 
 ### What is Git revert?
 #### Git revert will essentially create a new commit in your current branch. When it does this it is supposed to reverse the point in your commit history that you chose. So to give a little more context say we created 5 new files: 1, 2, 3, 4, and 5. Now, once we created them we use `git revert` and revert back the third commit with the hash "c8012d7". What it will do is remove the 3rd file and then create the new commit after. It also will not remove the commit history from the 3rd commit because it will still be there, so if you want to refer back to it you can, it will just revert your current working tree or the head of your current branch. It's non destructive and can also help for tracking bugs. 
-(place image here)
+![revert](https://user-images.githubusercontent.com/97576252/215595404-128cb712-6f73-4b78-8cf1-c2d670c14768.jpg)
+
 
 ### In what ways are these commands the same and what ways are they different?
 #### The git revert and git reset are similar as the both will undo commmits, but they are different in how they achieve that command. The way that reset and revert can be different is say you had the scenario in the git revert happens where you have the 5 commits. But you acutally want to go back to the 3rd file and remove the history and those files to the third file, you would do a `Git Reset --hard`. So, they are different because the revert will only remove the file you pointed to but reset will remove everything up to the commit you are pointing to. Git Checkout on the other hand is used to copy or 
@@ -86,19 +89,20 @@ using the command `git rebase <target branch> -i` it will bring up the various c
 
 ## Create a new repo and demonstrate your knowledge of the following items with screenshots:
 ### a Git reset 
-(place image here)
+![reset-demo](https://user-images.githubusercontent.com/97576252/215596035-c2d695cb-6ba8-4172-af6a-1578072f1be0.jpg)
 #### In here you will see that we reset the "new" branch with a hard reset back to 97ba6da commit, which all commits that are orphaned and are no longer in the commit history.
 
 ### a Git checkout
-(place image here)
+![checkout](https://user-images.githubusercontent.com/97576252/215596187-050f472e-fff4-4589-ba07-eb1fc7f20a71.jpg)
+![checkout2](https://user-images.githubusercontent.com/97576252/215596254-b0fea3f2-9320-4304-bf99-3237899bc6e6.jpg)
 #### You'll see here that we start in the master branch and move our way into the "new" branch using checkout
 
 ### a commit
-(place image here)
-In here you will see each commit that is made and is the snapshot of all data committed at the time.
+![commit](https://user-images.githubusercontent.com/97576252/215596712-97ec0cd2-1cbc-4b4e-9cbd-89c906321ab0.jpg)
+#### In here you will see each commit that is made and is the snapshot of all data committed at the time it will then be logged with the hash for its personal identifier. Within this commit is all the code saved inside each files when it was commited. In this image we only have one linear history with one branch making those commits.
 
 ### a Git revert
-(place image here)
+![revert](https://user-images.githubusercontent.com/97576252/215597026-b127254b-f894-4f47-a6c6-7c29d8035ebf.jpg)
 In here you will see the new commit and it is blue to indicate the git revert. 
 
 ## Git submodules
