@@ -32,21 +32,34 @@
 
 ## Create a new repo and demonstrate your knowledge of the following items with screenshots:
 ### A rebase merge
-here insert the image of the rebase
+![rebase2](https://user-images.githubusercontent.com/97576252/215554145-8473b860-5630-4c6a-b52f-0d259158edc5.jpg)
+![rebase](https://user-images.githubusercontent.com/97576252/215554158-90073465-4719-4cf1-b895-66d7ad429919.jpg)
+
 #### As you will see here we have the initial commits and a point where the "new" branch diverged from the master branch and created commits of their own. We then use the rebase command from the "new" feature and it re-writes its history on top of the master branch. 
 
 ### An interactive rebase merge
-here insert the images
+![interactive rebase](https://user-images.githubusercontent.com/97576252/215554403-bd5b2614-81cc-43f3-931e-e80da556a456.jpg)
+![interactive rebase2](https://user-images.githubusercontent.com/97576252/215554498-53edf63c-2cba-431c-b4e9-7cfca69a74a6.jpg)
+![interactive rebase3](https://user-images.githubusercontent.com/97576252/215554523-34de4203-b541-4909-8c82-6f59395a3247.jpg)
+![interactive rebase4](https://user-images.githubusercontent.com/97576252/215554581-318af307-2ffb-4534-8730-c07abcb94d10.jpg)
+![interactive rebase5](https://user-images.githubusercontent.com/97576252/215554605-39e38069-0e2b-4888-b606-2ad4c29ea876.jpg)
+
 #### In the interactive rebase you will place the commit history of the branch on top of the target branch just like a regular rebase, but the interactive rebase allows you to make changes to those commits. 
 using the command `git rebase <target branch> -i` it will bring up the various commits. In here you can choose from the list of commands you want to do for each commit before it is rebased into the other branch
 
 ### When you shouldn't rebase with a remote repo.
-#### In here I have pushed the local repo to a remote repo on github. Now the problem can arise when you create a remote repo that is worked on with a team. It destroys the history and make it difficult for others on your team to understand what happened. Another issue can arise when there are changes made to the same branch in the remote repo that are not made locally. When this happens and you use rebase and push to the remote it can be destructive as well.
+#### In here I have pushed the local repo to a remote repo on github. Now the problem can arise when you create a remote repo that is worked on with a team. It destroys the history and make it difficult for others on your team to understand what happened. Another issue can arise when there are changes made to the same branch in the remote repo that are not made locally. When this happens and you use rebase and push to the remote it can be destructive as well. As you will see in the screenshots here I have pushed my files to GitHub, but while I was making changes someone had made changes within GitHub without my knowledge (me again) and when pushing new changes to Github it won't allow me to do so.
+![remote](https://user-images.githubusercontent.com/97576252/215554881-80991eb4-8d28-4a14-8ed0-68c3ead865d5.jpg)
+![remote2](https://user-images.githubusercontent.com/97576252/215554919-856417db-6e70-42f0-8c0f-da5a5ef4d0ca.jpg)
+![remote3](https://user-images.githubusercontent.com/97576252/215554937-4f3b35ee-44b7-4143-a14e-a69a61aa4a99.jpg)
+![remote4](https://user-images.githubusercontent.com/97576252/215554951-9d559668-57cb-411a-9658-bbcbe114539b.jpg)
+![remote5](https://user-images.githubusercontent.com/97576252/215554965-8b27b5b6-1b2f-4cfb-ac8f-2f2d671d5a2c.jpg)
 
 ## Git reset, checkout, and revert
 ### What is Git reset?
 #### Git reset will essentially take your current branch and its commit history and have it point somewhere else.
-(show the image here)
+![reset](https://user-images.githubusercontent.com/97576252/215555666-9e8d12a8-c011-4851-a031-894cd56e6086.jpg)
+
 
 ### What is the difference between hard, mixed and soft?
 #### `Git reset --hard` will completely remove any commits made up to the commit that it will be pointed to and remove any of the changes made and are then removed from the local directory. They will show in the previous image like this as orphaned and unrelated to the commit history at that point.
@@ -54,7 +67,8 @@ using the command `git rebase <target branch> -i` it will bring up the various c
 #### `git reset --mixed` will reset you to the target commit and will unstage your commits, they are not removed and the files will stay the same.
 
 #### `git reset --soft` will not touch your index, so it will keep your files and stage all changes back, and will be back prior to being commited. It will still move you down to the targeted commit but when you run git status they will be there in the staging area.
-
+![hard, soft, reset](https://user-images.githubusercontent.com/97576252/215557231-d7bc3216-a611-4203-a933-10be348d25e6.png)
+(we need to get the website reference put in here_________________________________________________________________________________________________________________________________________________________________________________________________)
 ### What is Git checkout?
 #### Git checkout is a way for you to move from one branch to another. When working on a project and needing to split into another branch to work on the project without affecting the actual project you'll find this very handy to go back and forth between different versions. Not only that but you can point to a specific commit and look at it at that snapshot in time. So, it can be used to copy a file from another commit into your current working tree, but won't automatically commit the file.
 (place image here)
